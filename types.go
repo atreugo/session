@@ -4,17 +4,18 @@ import (
 	"github.com/fasthttp/session/v2"
 )
 
-// Config config struct
+// Config configuration of session manager.
 type Config session.Config
 
-// Session session struct
+// Session manages the users sessions.
 type Session struct {
 	*session.Session
 }
 
+// Store represents the user session.
 type Store struct {
 	*session.Store
 }
 
-// Provider interface implemented by providers
+// Provider interface implemented by providers.
 type Provider session.Provider
