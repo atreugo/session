@@ -20,7 +20,7 @@ func NewDefaultConfig() Config {
 	return Config(postgre.NewDefaultConfig())
 }
 
-// NewDefaultConfig returns a default configuration.
+// NewConfigWith returns a new configuration with especific paremters.
 func NewConfigWith(host string, port int64, username string, password string, dbName string, tableName string) Config {
 	cfg := postgre.NewConfigWith(host, port, username, password, dbName, tableName)
 
