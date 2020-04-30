@@ -1,7 +1,6 @@
 package memcache
 
 import (
-	"github.com/atreugo/session"
 	"github.com/fasthttp/session/v2/providers/memcache"
 )
 
@@ -9,7 +8,7 @@ import (
 type Config memcache.Config
 
 // New returns a new memcache provider configured.
-func New(cfg Config) (session.Provider, error) {
+func New(cfg Config) (*memcache.Provider, error) {
 	provider, err := memcache.New(memcache.Config(cfg))
 
 	return provider, err

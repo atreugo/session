@@ -1,7 +1,6 @@
 package postgre
 
 import (
-	"github.com/atreugo/session"
 	"github.com/fasthttp/session/v2/providers/postgre"
 )
 
@@ -9,7 +8,7 @@ import (
 type Config postgre.Config
 
 // New returns a new configured postgres provider.
-func New(cfg Config) (session.Provider, error) {
+func New(cfg Config) (*postgre.Provider, error) {
 	provider, err := postgre.New(postgre.Config(cfg))
 
 	return provider, err

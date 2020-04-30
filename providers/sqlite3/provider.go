@@ -1,7 +1,6 @@
 package sqlite3
 
 import (
-	"github.com/atreugo/session"
 	"github.com/fasthttp/session/v2/providers/sqlite3"
 )
 
@@ -9,7 +8,7 @@ import (
 type Config sqlite3.Config
 
 // New returns a new configured sqlite3 provider.
-func New(cfg Config) (session.Provider, error) {
+func New(cfg Config) (*sqlite3.Provider, error) {
 	provider, err := sqlite3.New(sqlite3.Config(cfg))
 
 	return provider, err

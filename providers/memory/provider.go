@@ -1,7 +1,6 @@
 package memory
 
 import (
-	"github.com/atreugo/session"
 	"github.com/fasthttp/session/v2/providers/memory"
 )
 
@@ -9,7 +8,7 @@ import (
 type Config memory.Config
 
 // New returns a new configured memory provider.
-func New(cfg Config) (session.Provider, error) {
+func New(cfg Config) (*memory.Provider, error) {
 	provider, err := memory.New(memory.Config(cfg))
 
 	return provider, err

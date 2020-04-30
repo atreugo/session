@@ -1,7 +1,6 @@
 package mysql
 
 import (
-	"github.com/atreugo/session"
 	"github.com/fasthttp/session/v2/providers/mysql"
 )
 
@@ -9,7 +8,7 @@ import (
 type Config mysql.Config
 
 // New returns a new configured mysql provider.
-func New(cfg Config) (session.Provider, error) {
+func New(cfg Config) (*mysql.Provider, error) {
 	provider, err := mysql.New(mysql.Config(cfg))
 
 	return provider, err
