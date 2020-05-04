@@ -9,12 +9,7 @@ type Config session.Config
 
 // Session manages the users sessions.
 type Session struct {
-	*session.Session
-}
-
-// Store represents the user session.
-type Store struct {
-	*session.Store
+	session *session.Session
 }
 
 // Provider interface implemented by providers.
