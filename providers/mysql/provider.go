@@ -4,7 +4,7 @@ import (
 	"github.com/fasthttp/session/v2/providers/mysql"
 )
 
-// Config provider settings
+// Config provider settings.
 type Config mysql.Config
 
 // New returns a new configured mysql provider.
