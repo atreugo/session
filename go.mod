@@ -3,6 +3,6 @@ module github.com/atreugo/session
 go 1.11
 
 require (
-	github.com/fasthttp/session/v2 v2.1.1
-	github.com/savsgio/atreugo/v11 v11.3.3
+	github.com/fasthttp/session/v2 v2.2.1
+	github.com/savsgio/atreugo/v11 v11.4.3
 )
